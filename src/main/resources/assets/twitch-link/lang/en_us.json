@@ -1,4 +1,6 @@
 {
   "text.autoconfig.twitch-link.title": "Twitch Link Configuration",
-  "text.autoconfig.twitch-link.option.channels": "Twitch channels"
+  "text.autoconfig.twitch-link.option.channels": "Twitch channels",
+  "tooltip.twitchlink.configure": "Configure TwitchLink",
+  "tooltip.twitchlink.reconnect": "Reconnect to Twitch"
 }

@@ -18,7 +18,7 @@ public abstract class MixinGameMenuScreen extends Screen {
 
     @Inject(method = "initWidgets", at = @At("RETURN"))
     private void hook_initWidgets(CallbackInfo ci) {
-        this.addButton(new TwitchButton(5, 15, 0, btn -> TwitchLink.openSettings((GameMenuScreen)(Object)this)));
-        this.addButton(new TwitchButton(5, 31, 1, btn -> TwitchLink.reconnect()));
+        this.addButton(new TwitchButton(5, 15, 0, btn -> TwitchLink.openSettings((GameMenuScreen)(Object)this), this::renderTooltip));
+        this.addButton(new TwitchButton(5, 31, 1, btn -> TwitchLink.reconnect(), this::renderTooltip));
     }
 }
