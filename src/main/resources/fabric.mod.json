@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "twitch-link",
+  "version": "${version}",
+  "name": "TwitchLink",
+  "description": "Link twitch.tv chat to your ingame chat!",
+  "authors": [
+    "Tom_The_Geek"
+  ],
+  "contributors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/twitch-link/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "me.geek.tom.twitchlink.TwitchLink"
+    ],
+    "client": [],
+    "server": [],
+    "modmenu": [
+      "me.geek.tom.twitchlink.ModmenuIntegration"
+    ]
+  },
+  "mixins": [
+    "twitch-link.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.0",
+    "fabric": "*"
+  }
+}

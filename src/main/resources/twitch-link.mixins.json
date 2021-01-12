@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "me.geek.tom.twitchlink.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [],
+  "client": [
+    "MixinChatHudLine",
+    "MixinChatHud",
+    "MixinGameMenuScreen"
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
