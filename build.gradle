@@ -20,6 +20,10 @@ repositories {
 		name = 'blay09-maven'
 		url = 'https://artifactory.blay09.net/artifactory/libs-snapshot/'
 	}
+	maven {
+		name = "TomTheGeek-mods"
+		url = "https://dl.bintray.com/tomthegeek/mods/"
+	}
 }
 
 dependencies {
@@ -45,6 +49,10 @@ dependencies {
 
 	modImplementation("io.github.prospector:modmenu:1.14.9+build.14") {
 		exclude(group: "net.fabricmc.fabric-api")
+	}
+
+	modApi("me.geek.tom:chat-icon-api:0.0.1") {
+		exclude group: "net.fabricmc-fabric-api"
 	}
 }
 
@@ -99,8 +107,8 @@ publishing {
 
 	// select the repositories you want to publish to
 	repositories {
-		maven {
-			if (ENV["BINTRAY_USER"]) {
+		if (ENV["BINTRAY_USER"]) {
+			maven {
 				url = 'https://api.bintray.com/maven/tomthegeek/mods/TwitchLink/'
 				credentials {
 					username = ENV["BINTRAY_USER"]

@@ -1,9 +1,12 @@
 package me.geek.tom.twitchlink.api;
 
-import me.geek.tom.twitchlink.ducks.TwitchChatHud;
+import me.geek.tom.chaticons.api.ChatIconsApi;
 import net.minecraft.client.gui.hud.ChatHud;
 import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+
+import static me.geek.tom.twitchlink.TwitchLink.MOD_ID;
 
 /**
  * Helper for working with chat messages
@@ -17,6 +20,6 @@ public class ChatHelper {
      * @param message An {@link Text} that is the message to be prefixed with a twitch icon.
      */
     public static void addTwitchMessage(ChatHud chat, Text message) {
-        ((TwitchChatHud) chat).addTwitchMessage(message);
+        ChatIconsApi.addChatMessageWithIcon(chat, message, new Identifier(MOD_ID, "textures/twitch_icon.png"));
     }
 }
